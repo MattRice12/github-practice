@@ -1,8 +1,14 @@
+MIN = 0
+MAX = 100
+
 def greeter(name)
-  return if name.is_a?(fixnum) || name.is_a?(Hash) || name.is_a?(Array)
-  puts "Hello #{name.upcase}!"
+  if name.is_a?(String)
+    puts "Hello #{name.upcase}!"
+  end
 end
 
-greeter ("Dane")
+greeter("Dane")
 greeter({})
 greeter([])
+
+puts "The Minimum amount is #{MIN} and the Maximum amount is #{MAX}"
