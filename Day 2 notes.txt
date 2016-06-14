@@ -1,5 +1,8 @@
 def greeter(name)
-  puts "Hello #{name}!"
+  return if name.is_a?(fixnum) || name.is_a?(Hash) || name.is_a?(Array)
+  puts "Hello #{name.upcase}!"
 end
 
 greeter ("Dane")
+greeter({})
+greeter([])
